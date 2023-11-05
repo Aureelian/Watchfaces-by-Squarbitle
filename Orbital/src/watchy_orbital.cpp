@@ -166,7 +166,7 @@ void WatchyOrbital::drawBattery() {
     fillArc3(0.0, batteryAngle, 4, 8, secondaryColor, 1);
     
     /*if(details){
-        drawDetails(batteryAngle, 5, String(voltage));
+        drawDetails(batteryAngle, 4, String(voltage));
     }*/
 }
 
@@ -455,9 +455,11 @@ void WatchyOrbital::drawDetails(float angle, unsigned int radius, String value){
     uint16_t height;
     display.getTextBounds(value, 0, 0, &x1, &y1, &width, &height);*/
     
+	// Calculate the end of the circle
     float x = center_x + radius * cos((angle - 90) * DEG2RAD);
     float y = center_y + radius * sin((angle - 90) * DEG2RAD);
     
+	// Calculate a x and y delta to move the cursor based on the angle of the circle
     x = x + 3 + 7*(sin((angle + 90.0)*DEG2RAD) - 1);
     y = y + 2 + 9*(sin((180-angle)*DEG2RAD) - 0.5);
     
