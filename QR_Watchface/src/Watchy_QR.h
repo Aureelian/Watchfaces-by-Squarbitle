@@ -6,6 +6,9 @@ class QR_Watchface : public Watchy{
     public:
         using Watchy::Watchy;
         void drawWatchFace();
+        void morseTime();
+        void vibMorseString(String s);
+        void vibMorseChar(char c);
         virtual void handleButtonPress();
 };
 
