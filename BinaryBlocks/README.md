@@ -1,4 +1,4 @@
-# Squaro watch face
+# BinaryBlocks watch face
 A binary watchface, using big blocks.
 
 Here is a screenshot showing 14:37.
