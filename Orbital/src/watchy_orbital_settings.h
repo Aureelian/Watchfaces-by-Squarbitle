@@ -4,13 +4,13 @@
 #include "watchy_orbital.h"
 
 // Latitude and longitude of your position. Used for sunrise/sunset and moon phase calculation
-float lat = 48.8534;
-float lon = 2.3488;
+float lat = 48.20000;
+float lon = 15.63333;
 
 // Translations of day of the week, starting at sunday (and ending at sunday too)
-const char* daysOfWeek[] = {"dimanche", "lundi", "mardi", "mercredi", "jeudi", "vendredi", "samedi", "dimanche"};
+const char* daysOfWeek[] = {"Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag", "Sonntag"};
 // Very short month names, january to december. For the "details" mode, so should be short to be shown on the circle
-const String shortMonths[] = {"ja", "fe", "ma", "av", "ma", "ju", "ji", "ao", "se", "oc", "no", "de"};
+const String shortMonths[] = {"Jan", "Feb", "Mär", "Apr", "Mai", "Jun", "Jul", "Aug", "Sep", "Okt", "Nov", "Dez"};
 
 /* Values of voltage considered as max (100%) and min (0%), to display the central circle.
  * Value is in milli-volt.
@@ -30,6 +30,6 @@ int batteryVMin = 3500;
  * 6 : black on white, details, 12h
  * 7 : black on white, details, 24h
  */
-RTC_DATA_ATTR int mode = 0;
+RTC_DATA_ATTR int mode = 3;
 
 #endif
